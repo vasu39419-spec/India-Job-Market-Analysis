@@ -1,0 +1,357 @@
+
+
+**Document Information (Portfolio BRD)**
+
+| Field | Details |
+| --- | --- |
+| **Project Owner** | **Vasu Sharma** |
+| **Project Type** | Student Portfolio / Business Analysis Case Study |
+| **Status** | ✅ Completed |
+| **Date** | February 2025 |
+| **Tools** | SQL, PostgreSQL, Power BI, DAX |
+| **GitHub** | https://github.com/vasu39419-spec/India-Job-Market-Analysis |
+| **Portfolio Note** | This BRD is written to demonstrate **Business Analyst methodology** (problem framing → requirements → delivery → validation) for placements and job applications. |
+</aside>
+
+---
+
+## 1. Executive Summary (Personal)
+
+As a **B.Com student at Sri Aurobindo College, Delhi**, preparing for placements, I realized my biggest problem wasn’t a lack of opportunities — it was the **time and confusion** involved in finding the right ones.
+
+I personally spent **~2 weeks (14 days)** jumping between job portals, LinkedIn posts, company career pages, and “advice threads,” trying to answer basic questions like: *Which cities have the most openings? What salary should I expect as a fresher? Which sectors are actually hiring right now?* The information was fragmented, salary numbers were often inconsistent, and most guidance felt outdated or anecdotal.
+
+To solve this, I built an end-to-end analysis project:
+
+- I **collected and curated 5,247 job listings** through a mix of **web scraping + manual verification**.
+- I stored the dataset in **PostgreSQL**, analyzed it using **SQL (joins, CTEs, aggregations)**, and converted insights into a **4-page Power BI dashboard** using **DAX measures** for KPIs.
+
+**Outcome / impact (for my own placement research):**
+
+- I reduced job-market research time by **~95% (14 days → ~30 minutes)** by moving from manual browsing to a single dashboard-driven workflow.
+
+**Business value (who this helps and how):**
+
+- **Students / fresh graduates:** quicker, data-driven decisions on city/sector/role targeting.
+- **Career counselors / placement teams:** evidence-backed guidance instead of generic advice.
+- **Recruiters / HR (high-level):** a macro snapshot of demand patterns, salary distribution, and competition signals.
+
+---
+
+## 1.5 Why I Built This Project (My Motivation & Learning Journey) 💡
+
+During placement preparation, I kept thinking: *“I’m spending more time searching than actually preparing.”* I had 10+ tabs open every day, and I still felt unsure because the information wasn’t consistent.
+
+My “aha moment” was simple:
+
+> If I can analyze business data in college projects, why can’t I analyze the job market like a business problem?
+> 
+
+So I treated my own placement challenge as a **business analysis case study**:
+
+- **Personal need:** I wanted clarity and speed in career research.
+- **Analytical project:** I collected data, defined requirements, built a dashboard, and validated outputs.
+- **Portfolio case study:** I documented the methodology to show recruiters I understand BA work — not just tools.
+
+**Skills demonstrated (end-to-end BA thinking):**
+
+- Problem identification and stakeholder/persona framing
+- Requirements gathering and prioritization
+- Data collection strategy (scraping + manual curation)
+- SQL analysis (joins, CTEs, aggregations, validation checks)
+- KPI design and visualization in Power BI (DAX measures)
+- Documentation and communication (this BRD + GitHub documentation)
+
+---
+
+## 2. Business Background & Problem Statement (Personal → Business Framing)
+
+### 2.1 Personal story (how the problem showed up)
+
+During placement preparation, I found that job research was:
+
+- **Manual:** lots of browsing, note-taking, and comparing across portals
+- **Time-consuming:** constant switching between sources
+- **Unreliable:** salary values and role expectations often conflicted
+- **Hard to validate:** advice online was often outdated or too generic
+
+### 2.2 Pain points I personally experienced ⚠️
+
+- Keeping **10+ browser tabs** open and still missing good opportunities
+- **Conflicting salary data** (role names differ, salary ranges not standardized)
+- **Outdated advice** (market shifts faster than blog updates)
+- Job titles that look similar but mean different things across companies
+- Salary not disclosed in many listings → hard to benchmark expectations
+
+### 2.3 Current state vs. desired state (As‑Is vs To‑Be) 📊
+
+| Dimension | **As‑Is (Before)** | **To‑Be (Target State)** |
+| --- | --- | --- |
+| Research workflow | Manual browsing across portals | Dashboard-led exploration |
+| Effort | ~14 days of scattered searching | ~30 minutes to shortlist direction |
+| Confidence | Low (anecdotal, inconsistent) | Higher (data-driven + validated rules) |
+| Salary benchmarking | Confusing / inconsistent | Standardized ranges (LPA) + clear filters |
+| Decision support | “Guesswork” based on posts | Evidence-based insights by city/sector/role |
+
+### 2.4 Problem statement (BA-style)
+
+Students and job seekers preparing for placements need a **single, reliable, data-driven** view of job market trends (city, sector, experience, salary, company type) because current information is fragmented across portals and is difficult to compare, validate, and use for decision-making.
+
+---
+
+## 3. Business Objectives (Personal)
+
+In this project, my objective was to build a portfolio-ready BA case study that is also genuinely useful for placement preparation.
+
+### 3.1 Primary objectives
+
+1. I wanted a dashboard that helps students/job seekers quickly identify **where the jobs are** (city + sector).
+2. I wanted to benchmark **salary ranges** realistically for entry-level and broader roles.
+3. I wanted to understand **work mode trends** (on-site/hybrid/remote).
+4. I wanted to compare **company types** (e.g., Unicorn vs MNC) and how they pay.
+5. I wanted to demonstrate BA methodology end-to-end (requirements → data → insight → delivery → documentation).
+
+### 3.2 Success metrics (what “success” meant for me)
+
+- Ability to answer key career questions in **≤ 30 minutes**
+- A consistent dataset of **5,247 listings** stored cleanly in PostgreSQL
+- Clear, interpretable dashboard pages with reliable KPI calculations
+- A GitHub repo with SQL scripts and documentation that a recruiter can review
+
+---
+
+## 4. Project Scope (Personal)
+
+### 4.1 ✅ In Scope
+
+- [x]  Web scraping + manual curation of job listing data
+- [x]  PostgreSQL database for structured storage
+- [x]  SQL analysis using joins, CTEs, and aggregations
+- [x]  Power BI semantic model + DAX measures for KPIs (including YoY-style KPI patterns where applicable)
+- [x]  4-page interactive Power BI dashboard:
+    - Market Overview & Demographics
+    - Financial & Salary Insights
+    - Entry-Level (Fresher) Dynamics
+    - Enterprise & Corporate Benchmarking
+- [x]  Documentation (BRD + GitHub documentation)
+
+### 4.2 🚫 Out of Scope (for this completed version)
+
+- [ ]  Real-time data refresh pipeline (streaming updates)
+- [ ]  Predictive analytics / ML forecasting
+- [ ]  Automated alerting (e.g., notify when salary spikes)
+- [ ]  Production-grade deployment with enterprise security/RLS
+- [ ]  Integration with job-application tracking systems
+
+---
+
+## 5. Personas (Who This Was Built For) — Personal First
+
+### 5.1 Primary persona: Myself (Fresh Graduate)
+
+I am the primary stakeholder/persona for this project.
+
+**Profile**
+
+- Name: **Vasu Sharma**
+- Background: **B.Com student, Sri Aurobindo College (Delhi)**
+- Experience: **0 years (entry-level)**
+- Decision timeline: **3–6 months**
+- Interest areas: **IT / FinTech** (and roles adjacent to analytics/business)
+
+**My key questions this dashboard answers**
+
+- Which **cities** have the highest job volume for roles I can target?
+- Which **sectors** are hiring the most right now?
+- What is a realistic **salary range** for entry-level vs mid-level roles?
+- Are **Unicorns actually paying more** than MNCs (and by how much)?
+- Which roles show stronger demand (and where)?
+- What work mode is dominant (on-site/hybrid/remote), and how should that affect my choices?
+
+### 5.2 Secondary personas (who else benefits)
+
+| Persona | What they need | How this dashboard helps |
+| --- | --- | --- |
+| Career counselors | Evidence-based guidance | Quick insights for advising students |
+| Placement teams | Trend snapshots | City/sector demand and salary ranges |
+| Fellow students/job seekers | Faster targeting | Filtering and benchmarking reduces confusion |
+
+### 5.3 How I validated requirements (real-world input)
+
+- I **surveyed 15 classmates** to understand what they struggle with (city selection, salary expectations, role confusion).
+- I also spoke with **career counselors** to validate which insights are most useful for placement guidance.
+
+---
+
+## 6. Assumptions & Constraints (Technical / Formal)
+
+- 6.1 Assumptions
+    - The dataset represents a useful snapshot of the 2024–2026 job market (based on the collected postings).
+    - Salary values are normalized into **₹ LPA** for consistent benchmarking.
+    - “Industry/sector,” “work mode,” and “experience level” are standardized during cleaning for accurate comparisons.
+- 6.2 Constraints
+    - Job portals and company pages have inconsistent formats, which affects scraping consistency.
+    - Many job listings do not disclose salary; salary analysis is limited to records where salary is present/derivable.
+    - Dashboard performance depends on Power BI model design and local machine resources when viewed in Desktop.
+
+---
+
+## 7. Solution Overview (Actual Project Data + What Was Built)
+
+### 7.1 Data coverage (actual numbers)
+
+- **Total job listings:** **5,247**
+- **Cities covered (17):** Delhi NCR, Bangalore, Mumbai, Hyderabad, Pune, Chennai, Kolkata, Ahmedabad, Jaipur, Gurugram, Noida, Indore, Lucknow, Chandigarh, Kochi, Coimbatore, Bhubaneswar *(as categorized in the dataset)*
+- **Industries/Sectors:** **15 sectors**
+- **Salary range:** **₹0.8 LPA to ₹115.4 LPA**
+- **Average salary:** **₹19.83 LPA**
+
+### 7.2 Core technology stack
+
+- **PostgreSQL** for storage and structured querying
+- **SQL** analysis using **joins, CTEs, aggregations**, and validation queries
+- **Power BI** for data modeling and visualization
+- **DAX** measures for KPIs (and YoY-style KPI patterns where relevant)
+
+<aside>
+📎
+
+**Repository reference:** The GitHub repository contains the project documentation and SQL work (queries/scripts) used to build the analysis outputs:  
+
+https://github.com/vasu39419-spec/India-Job-Market-Analysis
+
+</aside>
+
+### 7.3 Dashboard pages (what each page answers)
+
+1. **Market Overview & Demographics** — city distribution, sector dominance, work-mode composition, experience demand.
+2. **Financial & Salary Insights** — salary distribution, role/sector comparisons, compensation benchmarks.
+3. **Entry-Level & Fresher Dynamics** — specific analysis for 0–1 years experience.
+4. **Enterprise & Corporate Benchmarking** — company rankings, company-type comparisons, openings vs applicant funnel indicators.
+
+### 7.4 Key findings (from my analysis)
+
+- **IT leads job volume:** **35%** of listings
+- **Bangalore has the highest job volume:** **28%** of listings
+- **On-site dominates:** **52%** of listings
+- **Unicorns pay more than MNCs:** **~15% higher** on average
+- **FinTech pays highest for freshers** (as observed in the entry-level cut)
+
+---
+
+## 8. Business Requirements (BR) ✅ (With User Stories + Acceptance Criteria)
+
+<aside>
+✅
+
+In this section, requirements are written in a BA-friendly way (BR format + user story). This shows how the dashboard supports real placement decisions — not just visuals.
+
+</aside>
+
+### 8.1 Requirements table (BR format)
+
+| BR ID | Requirement | User Story | Acceptance Criteria (Specific) |
+| --- | --- | --- | --- |
+| **BR‑01** | Filtering by city/sector/role/experience/work mode/company type | **As a fresh graduate, I want to filter by city, so that I can focus on jobs in my preferred location.** | Filters must work across all pages and support slicing the full dataset of **5,247 listings** without breaking visuals. |
+| **BR‑02** | Market overview KPIs (total listings, city split, sector split, work mode, experience) | **As a student/job seeker, I want an instant market snapshot, so that I can understand where demand is.** | Page must show total listings = **5,247**, and include city share (e.g., Bangalore **28%**) and sector share (IT **35%**). |
+| **BR‑03** | Salary analytics (min/max/avg, comparisons) | **As a fresher, I want salary benchmarks by sector and role, so that I can set realistic expectations.** | Salary cards must show overall range **₹0.8–₹115.4 LPA** and average **₹19.83 LPA**, updating based on filters. |
+| **BR‑04** | Entry-level (0–1 years) dedicated insights | **As a fresher, I want a dedicated view for entry-level roles, so that I’m not comparing myself to senior roles.** | Entry-level page must only include records labeled as **0–1 years** (as per the dataset standardization rules). |
+| **BR‑05** | Company benchmarking + company-type comparison | **As a job seeker, I want to compare Unicorns vs MNCs, so that I can decide where to apply first.** | Dashboard must show the finding: **Unicorns pay ~15% more than MNCs** (based on the model’s aggregation). |
+| **BR‑06** | Metric definitions & transparency | **As a career counselor, I want definitions for KPIs, so that I can trust and explain the numbers.** | All major KPIs should have definitions (tooltip or a definitions section). |
+| **BR‑07** | Documentation + reproducibility for recruiters | **As a recruiter, I want to see the methodology, so that I can evaluate BA thinking, not just charts.** | GitHub link must be referenced and documentation must explain data collection, cleaning rules, and KPI logic. |
+- 8.2 Non-functional requirements (NFR) — details
+    - **NFR‑01 Performance:** Interactions should feel responsive when slicing the 5,247-row dataset.
+    - **NFR‑02 Usability:** Clear labeling and consistent layout for non-technical audiences (students/counselors).
+    - **NFR‑03 Accuracy:** KPI results must match PostgreSQL query results for the same filters (spot-checking).
+    - **NFR‑04 Maintainability:** Measures and queries should be readable and documented in the repository.
+
+---
+
+## 9. Data Requirements (Technical / Formal)
+
+- 9.1 Data entities (high level)
+    - Job Listing (fact)
+    - Company (dimension)
+    - City (dimension)
+    - Sector (dimension)
+    - Role (dimension)
+    - Experience band (dimension)
+    - Work mode (dimension)
+    - Salary metrics (fields)
+- 9.2 Minimum required fields
+    - Listing ID (unique key)
+    - Role / Job title
+    - Company
+    - City
+    - Sector
+    - Experience band
+    - Work mode
+    - Salary (normalized to ₹ LPA where available)
+    - Source / snapshot metadata (where captured)
+- 9.3 Data transformation rules (what was done)
+    - Standardization of city naming (e.g., “Delhi”, “Delhi NCR” unified where appropriate)
+    - Sector mapping into 15 standardized categories
+    - Salary normalization into ₹ LPA for comparisons
+    - Handling missing salary values with clear “not disclosed” behavior in salary metrics
+
+---
+
+## 10. Reporting & Visualization Requirements (Technical / Formal)
+
+- KPI cards must use consistent formatting (₹ LPA, % shares).
+- Pages must support cross-filtering and cross-highlighting.
+- Key visuals should reflect the main findings (IT 35%, Bangalore 28%, On-site 52%, etc.).
+- DAX measures should be used for KPI calculations and consistent filter behavior.
+
+---
+
+## 11. Acceptance Criteria (Technical / Formal)
+
+1. The dashboard contains **4 pages** and each page aligns with the defined purpose.
+2. The model supports slicing the dataset of **5,247 listings** without broken visuals.
+3. Salary KPIs reflect **₹0.8–₹115.4 LPA** and average **₹19.83 LPA**, and update with filters.
+4. City and sector findings (e.g., **Bangalore 28%**, **IT 35%**) are reproducible via SQL checks.
+5. Entry-level page only shows the 0–1 years segment as defined in the data rules.
+6. Company-type comparison confirms **Unicorns ~15% higher pay** than MNCs using the dashboard aggregation logic.
+7. Documentation exists and is accessible via GitHub link.
+
+---
+
+## 12. Risks & Mitigation (What Actually Happened) ⚠️
+
+| Risk / challenge I faced | Why it mattered | What I actually did (mitigation) |
+| --- | --- | --- |
+| Data inconsistency across sources | Same role/sector labeled differently | Standardized categories and created mapping rules in SQL |
+| Salary data often missing | Salary averages can be misleading | Treated missing salary separately; ensured salary KPIs only use valid salary rows |
+| Manual verification needed | Scraped data can include noise | Used manual curation checks for key fields |
+| Outliers distort salary benchmarks | A few high values skew averages | **Excluded outliers > ₹50 LPA** for specific benchmarking views and used validation rules in SQL |
+
+---
+
+## 13. Dependencies (Technical / Formal)
+
+- PostgreSQL environment (local or hosted)
+- Power BI Desktop for development
+- Optional: Power BI Service if publishing (not required for portfolio review)
+- GitHub repository for documentation and reproducibility
+
+---
+
+## 14. Milestones (Portfolio timeline — illustrative)
+
+- Data collection (scraping + manual curation): completed
+- PostgreSQL schema + cleaning rules: completed
+- SQL analysis & validation queries: completed
+- Power BI dashboard build + DAX measures: completed
+- Documentation (BRD + GitHub): completed
+
+---
+
+## 15. Glossary
+
+- **LPA:** Lakhs per annum
+- **SQL CTE:** Common Table Expression (used for structured multi-step queries)
+- **DAX:** Data Analysis Expressions for measures and KPIs in Power BI
+- **Work mode:** On-site / Hybrid / Remote
+
+---
